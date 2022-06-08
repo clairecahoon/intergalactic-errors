@@ -9,61 +9,154 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Intergalactic Error Messages.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Intergalactic Error Messages" startnode="1" creator="Twine" creator-version="2.3.16" ifid="8CF160A9-64D5-45CC-82E1-23EA241A6E54" zoom="1" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Introduction" tags="" position="50,300" size="200,100">This one sets up the game, characters, and overall setting
-Your ship is broken and you&#39;re heading to the nearest planet to get it fixed. The problem is that you can&#39;t steer!
+<tw-storydata name="Intergalactic Error Messages" startnode="1" creator="Twine" creator-version="2.3.16" ifid="8CF160A9-64D5-45CC-82E1-23EA241A6E54" zoom="1" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Game Introduction" tags="" position="50,300" size="200,100">#Intergalactic Error Messages
+Welcome to //Intergalactic Error Messages//, an interactive story game.
 
-[[Move on to the next page -&gt; Intro part 2]]
-</tw-passagedata><tw-passagedata pid="2" name=" Intro part 2" tags="" position="300,300" size="200,100">This one introduces the scenario and the overall goal
+You will be able to move through the sotry and make choices by clicking on the blue links on each page.
 
-[[Move on to the next area -&gt; Error #1]]</tw-passagedata><tw-passagedata pid="3" name=" Error #1" tags="" position="625,300" size="100,100">Machinery malfunction
-There is an error message coming from the communication device.
+[[Get Started -&gt; Story Introduction: part 1]]
+</tw-passagedata><tw-passagedata pid="2" name="Story Introduction: part 2" tags="" position="325,275" size="200,100">Your ship is in bad shape, so you&#39;ve planned a course to the nearest space port for repairs. You did what you could, but the astroids left you with no steering.
 
-[[Look up the error -&gt;Look up the error]]
-[[Remove the part that the error is about -&gt;Remove the part that the error is about]]
-[[Problem 1]]</tw-passagedata><tw-passagedata pid="4" name="Remove the part that the error is about" tags="" position="800,300" size="100,100">Take out the part the error is about
-See the part the error is talking about and take it out, see what happens
-[[Error #2]]</tw-passagedata><tw-passagedata pid="5" name="Problem 1" tags="" position="800,150" size="100,100">This one does not solve the problem
+It seems like you&#39;re pointed in the right direction when your co-pilot shouts, [[&quot;There&#39;s something heading straight towards us!&quot; -&gt; Story Introduction: part 3]]
 
-[[ Error #1]] </tw-passagedata><tw-passagedata pid="6" name="Error #2" tags="" position="1025,300" size="100,100">Coding a message to send
-The message comes out backwards
+</tw-passagedata><tw-passagedata pid="3" name=" Error #1" tags="" position="675,300" size="100,100">You try to start typing in the communication terminal, but it gives you an error message right away:
 
-[[Commenting out parts of the code]]
-[[Print out informational messages]]
-[[Problem #2]]</tw-passagedata><tw-passagedata pid="7" name="Look up the error" tags="" position="800,450" size="100,100">Look up the error
-Google the error message to see what part it&#39;s talking about
-[[Remove the part that the error is about]] </tw-passagedata><tw-passagedata pid="8" name="Commenting out parts of the code" tags="" position="1200,450" size="100,100">Commenting out different parts of the code to see what&#39;s working
-[[Error #3]] </tw-passagedata><tw-passagedata pid="9" name="Print out informational messages" tags="" position="1200,300" size="100,100">Add in messages to print out information as it goes
+(text-colour:lime)[ERROR ERROR test global context for touchpad input no signal ERROR ERROR]
 
-[[Error #3]] </tw-passagedata><tw-passagedata pid="10" name="Problem #2" tags="" position="1200,150" size="100,100">Double-click this passage to edit it.
-[[Error #2]] </tw-passagedata><tw-passagedata pid="11" name="Error #3" tags="" position="1425,300" size="100,100">Communicator says the message can&#39;t send
+You need to fix this right away. Do you...
+
+* [[Look up the error message in the Universal Guide to Spaceships -&gt;Look up the error]]
+* [[It says something about the touchpad, remove that part and see if it works. -&gt;Remove the part that the error is about]]
+* [[Panic]]</tw-passagedata><tw-passagedata pid="4" name="Remove the part that the error is about" tags="" position="850,300" size="100,100">You decide to try and remove the part that isn&#39;t working and see if the rest of the terminal is ok. The error message says something about the touchpad, so you disconnect it and [[try the terminal again -&gt;Replace the part]].</tw-passagedata><tw-passagedata pid="5" name="Panic" tags="" position="850,150" size="100,100">You panic, of course! Everything is broken and the ship is doomed!
+
+Luckily, your co-pilots work together to calm you down.
+
+Unluckily, panicking didn&#39;t make the error message go away and you lost valuable time.
+
+[[Return to the error message and try again -&gt; Error #1]] </tw-passagedata><tw-passagedata pid="6" name="Error #2" tags="" position="1300,300" size="100,100">You&#39;re at the communication terminal, ready to send a message. You craft the usual greeting message, which is &quot;Greetings! We are a peaceful exploration mission. Can you confirm that you received this message?&quot;
+
+You type it out and press &quot;prepare to send&quot; in the terminal.
+
+You see the following:
+	Message prepared, please confirm:
+	//?egassem siht deviecer uoy taht mrifnoc uoy naC .noissim noitarolpxe lufecaep a era eW !sgniteerG//
+
+That&#39;s not right! You need to [[look closer at what happens when you click &quot;prepare to send.&quot; -&gt;Error #2.2]]
+</tw-passagedata><tw-passagedata pid="7" name="Look up the error" tags="" position="850,450" size="100,100">You pull up the Universal Guide to Spaceships in your personal communicator and copy-paste the error message in.
+
+You find this entry:
+//If you see the error message &quot;(text-colour:lime)[test global context for touchpad input no signal],&quot; it is referring to the touchpad input. If it has not been used in a while, the signal may need to be restarted.//
+
+That doesn&#39;t sound exactly like this situation, but it&#39;s worth a try! You restart the touchpad and [[try the communication terminal again -&gt;Success #1]].</tw-passagedata><tw-passagedata pid="8" name="Commenting out parts of the code" tags="" position="1625,450" size="100,100">You go through each step, removing it and running the command to prepare text. When you take out &quot;Format the text for transmission,&quot; the text appears normally!
+
+There must be something in the formatting that is messing up the message. It won&#39;t look as pretty if we leave out this stpe, but it will work.
+
+Later, we can look closer at &quot;Format the text for transmission&quot; to fix it.
+
+For now, you move on to [[confirm the message and send.-&gt;Error #3]]</tw-passagedata><tw-passagedata pid="9" name="Print out informational messages" tags="" position="1625,300" size="100,100">You add in an informational message after each step that tells you the result. This is what yous see:
+
+0. Check the text for spelling errors
+-&gt; 0 spelling errors
+1. Check the text for length
+-&gt; Message is 97 characters
+2. Format the text for transmission
+-&gt; Background is black
+-&gt; Text is white
+-&gt; Font is Futura
+-&gt; Text is reversed
+3. Confirm the final text with the user
+-&gt; Message sent to user
+
+Ah-ha! In the step for &quot;Format the text for transmission,&quot; it changes some of the styling and then reverses the text!
+
+You don&#39;t know how that line got there, but we don&#39;t need reversed text.
+
+You take out the command ot reverse the text and press the button again. You see the correct message: &quot;Greetings! We are a peaceful exploration mission. Can you confirm that you received this message?&quot;
+
+Now you can [[confirm the message and prepare it to send -&gt;Error #3]] </tw-passagedata><tw-passagedata pid="10" name="Problem #2" tags="" position="1625,150" size="100,100">You start writing new instructions for the terminal to add another step at the end that will fix the text. 
+
+It&#39;s difficult to tell what happened to the original message, so it takes a lot of trial and error to make the message correct again. 
+
+Instead of fixing the problem, you added more steps to reverse the effects, and it took so many lines of code that now the terminal runs slowly and inefficiently.
+
+[[Maybe there was a better way?-&gt;Error #2.2]] </tw-passagedata><tw-passagedata pid="11" name="Error #3" tags="" position="1925,300" size="100,100">Success! You confirm the message and press Send.
+
+But there&#39;s yet another problem, the terminal says, &quot;Message failed to send.&quot;
+
+Communicator says the message can&#39;t send
 
 [[Comment out parts of the code]]
 [[Look at others&#39; examples]]
-[[Problem #3]]
-</tw-passagedata><tw-passagedata pid="12" name="Comment out parts of the code" tags="" position="1600,300" size="100,100">Print out information messages to see where it becomes an error
+[[Problem #3]]</tw-passagedata><tw-passagedata pid="12" name="Comment out parts of the code" tags="" position="2075,300" size="100,100">Print out information messages to see where it becomes an error
 
-[[Error #4]]</tw-passagedata><tw-passagedata pid="13" name="Look at others&#39; examples" tags="" position="1600,450" size="100,100">Look up examples in the network of when other people had a similar error or created a similar problem.
-[[Error #4]] </tw-passagedata><tw-passagedata pid="14" name="Problem #3" tags="" position="1600,150" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="15" name="Error #4" tags="" position="1825,300" size="100,100">Deciphering an alien language
-The aliens recieved our general greeting and responded saying that they can&#39;t make sense of it.
+[[Error #4]]</tw-passagedata><tw-passagedata pid="13" name="Look at others&#39; examples" tags="" position="2075,450" size="100,100">Look up examples in the network of when other people had a similar error or created a similar problem.
+[[Error #4]] </tw-passagedata><tw-passagedata pid="14" name="Problem #3" tags="" position="2075,150" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="15" name="Error #4" tags="" position="2375,300" size="100,100">Success! You sent a greeting to the Boggle ship. They respond to you quickly with this message:
 
-[[Compare it to documentation about the aliens&#39; language]]
-[[Problem #1]]</tw-passagedata><tw-passagedata pid="16" name="Compare it to documentation about the aliens&#39; language" tags="" position="2000,300" size="100,100">Find documentation of what greetings look like in their language and compare it to our greeting. Find a punctuation error, send a corrected message. 
+&quot;[Translated from Bogglese] Hello! We recieved a message from you but it does not make sense. Are you trying to communicate?&quot;
 
-[[Error #5]]</tw-passagedata><tw-passagedata pid="17" name="Problem #1" tags="" position="2000,150" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="18" name="Error #5" tags="" position="2225,300" size="100,100">They respond that they understand now, what can they do? We need for them to change directions, so we send back &quot;Turn right&quot;
-They respond back &quot;Done&quot;, but they&#39;re still on a collision course.
+Time is running out and they&#39;re still heading right for you. What do you try to figure out what&#39;s wrong with your message?
 
-[[Ask a friend for help]]
-[[Check documentation for punctuation errors again]]
-[[Panic!!]]</tw-passagedata><tw-passagedata pid="19" name="Ask a friend for help" tags="" position="2400,300" size="100,100">You ask your crewmate for help, and they remind you that this species communicates very literally. They probably did exactly what we asked, which was that the recipient of the message turned to the right (see in the incoming message).
+* [[Search in the Galactic Wide Web to see if anyone else has had similar problems with Bogglese translations. -&gt;Compare with others]]
+* [[Throw out the first message and start over -&gt;Problem #1]]
+* [[Find documentation for Bogglese and compare your message to an example.-&gt;Compare with documentation]]</tw-passagedata><tw-passagedata pid="16" name="Compare with documentation" tags="" position="2525,300" size="100,100">You find the official documentation for Bogglese, which shows you how to construct sentences and use punctuation. You find an entry for &quot;greeting messages.&quot;
+
+You put your translated message next to the example message to find any differences.
+
+[TBD]
+
+You edit your message to match the documentation and [[try sending the message again.-&gt;Error #5]]</tw-passagedata><tw-passagedata pid="17" name="Problem #1" tags="" position="2525,150" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="18" name="Error #5" tags="" position="2825,300" size="100,100">Success! You get a message back immedeately that says, &quot;Greetings! We understand you now and can confirm that we recieved your message. What do you need?&quot;
+
+Now that you know how their sentences are constructed, you write a reply: &quot;Our steering is broken and we are going to crash into you. Can you turn right?&quot;
+
+The Boggle ship responds, &quot;Of course, it&#39;s done.&quot;
+
+You and your co-pilots breathe a sigh of relief. 
+
+Then you look up and see that their ship is still headed stright for you! You&#39;re still about to crash! 
+
+What went wrong? What will you do?
+
+[[Panic!!]]
+[[Ask your co-pilots for advice-&gt;Ask a friend for help]]
+[[Return to the Booglese documentation to check for translation errors-&gt;Check documentation for punctuation errors again]]</tw-passagedata><tw-passagedata pid="19" name="Ask a friend for help" tags="" position="3000,300" size="100,100">You ask your crewmate for help, and they remind you that this species communicates very literally. They probably did exactly what we asked, which was that the recipient of the message turned to the right (see in the incoming message).
 They suggest editing our message to:
 [[&quot;Turn your ship to the right&quot;]]
 [[&quot;Please turn right&quot;]]
-[[&quot;Turn your ship 45 degrees to the right&quot;]]</tw-passagedata><tw-passagedata pid="20" name="Check documentation for punctuation errors again" tags="" position="2400,450" size="100,100">You double-check the punctuation, but everything looks right to you.
-[[Ask a friend for help]] </tw-passagedata><tw-passagedata pid="21" name="Panic!!" tags="" position="2400,150" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="22" name="&quot;Turn your ship to the right&quot;" tags="" position="2600,475" size="100,100">This kind of works, but they don&#39;t turn it very far, so you have to send more messages to get out of the way.
-[[The End]] </tw-passagedata><tw-passagedata pid="23" name="&quot;Please turn right&quot;" tags="" position="2600,350" size="100,100">They turn to the right again, but the ship stays on course, try again!
-[[go back -&gt;Ask a friend for help]] </tw-passagedata><tw-passagedata pid="24" name="&quot;Turn your ship 45 degrees to the right&quot;" tags="" position="2600,225" size="100,100">This does the trick!
+[[&quot;Turn your ship 45 degrees to the right&quot;]]</tw-passagedata><tw-passagedata pid="20" name="Check documentation for punctuation errors again" tags="" position="3000,450" size="100,100">You double-check the punctuation, but everything looks right to you.
+[[Ask a friend for help]] </tw-passagedata><tw-passagedata pid="21" name="Panic!!" tags="" position="3000,150" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="22" name="&quot;Turn your ship to the right&quot;" tags="" position="3175,425" size="100,100">This kind of works, but they don&#39;t turn it very far, so you have to send more messages to get out of the way.
+[[The End]] </tw-passagedata><tw-passagedata pid="23" name="&quot;Please turn right&quot;" tags="" position="3175,300" size="100,100">They turn to the right again, but the ship stays on course, try again!
+[[go back -&gt;Ask a friend for help]] </tw-passagedata><tw-passagedata pid="24" name="&quot;Turn your ship 45 degrees to the right&quot;" tags="" position="3175,175" size="100,100">This does the trick!
 
-[[The End]]</tw-passagedata><tw-passagedata pid="25" name="The End" tags="" position="2825,325" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
+[[The End]]</tw-passagedata><tw-passagedata pid="25" name="The End" tags="" position="3500,300" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="26" name=" Story Introduction: part 1" tags="" position="325,150" size="200,100">The year is 3025, and you are a brave explorer on a small spacecraft in the outer limits of space. 
+
+You and your two co-pilots are mapping out new parts of the galaxy to bring up-to-date maps back to Earth.
+
+Things were going well, but you just ran into some [[trouble with an astroid belt -&gt;Story Introduction: part 2]].</tw-passagedata><tw-passagedata pid="27" name=" Story Introduction: part 3" tags="" position="325,400" size="200,100">There&#39;s a huge ship coming right towards you! You can&#39;t steer out of the way, so if they don&#39;t turn, your ship will be destroyed.
+
+Your co-pilot says, &quot;That looks like a Boggle ship, they&#39;re usually friendly to passing explorers. We just need to send them a message and ask them to change their course.&quot;
+
+You [[rush over to the communication terminal -&gt; Error #1]] to send it.</tw-passagedata><tw-passagedata pid="28" name="Replace the part" tags="" position="1000,300" size="100,100">Success!
+
+The terminal works, but now you don&#39;t have the touchpad to navigate with. You try reconnecting it, and it appears to be working again.
+
+You move on to [[use the communication terminal.-&gt;Error #2]]</tw-passagedata><tw-passagedata pid="29" name="Success #1" tags="" position="1000,450" size="100,100">Success!
+
+You fixed the terminal by restarting the touchpad, now you can [[access it to send a message -&gt;Error #2]]. </tw-passagedata><tw-passagedata pid="30" name="Error #2.2" tags="" position="1450,300" size="100,100">You open up the application and look at the steps needed to prepare the message for sending:
+
+0. Check the text for spelling errors
+1. Check the text for length
+2. Format the text for transmission
+3. Confirm the final text with the user
+
+What do you do now that you know each step?
+
+[[Take out each step in turn to see which one is changing the text.-&gt;Commenting out parts of the code]]
+[[Add in informational messages that tell you the result of each step as it&#39;s happening.-&gt;Print out informational messages]]
+[[Add your own step at the end to fix the text again-&gt;Problem #2]]</tw-passagedata><tw-passagedata pid="31" name="Compare with others" tags="" position="2525,450" size="100,100">You log in to the Galactic Wide Web and search for &quot;communications terminal to Bogglese,&quot; hoping that someone else has had trouble translating English to Bogglese.
+
+There are lots of search results, but the first is an open forum for spaceship engineers. One post says, &quot;Bogglese is sooo hard for normal translators to handle, I had to do some customized modifications on mine to get the punctuation to translate right. Otherwise you&#39;re stuck using the Bogglese documentation -- fine for a few sentences, but I wrote a whole book I need to translate.&quot;
+
+Sounds like this is a common problem, which is good news. You probably don&#39;t have time to modify your communication terminal, so you decide to [[try using the Bogglese documentation-&gt;Compare with documentation]].</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
