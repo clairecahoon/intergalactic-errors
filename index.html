@@ -12,14 +12,18 @@
 <tw-storydata name="Intergalactic Error Messages" startnode="1" creator="Twine" creator-version="2.3.16" ifid="8CF160A9-64D5-45CC-82E1-23EA241A6E54" zoom="1" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/*Colors:
 Dark Teal: #07393C
 Teal: #2C666E
+Light Teal: #46A9AA
 Gold: #DCB452
 Yellow: #F7DD5C
 Light yellow: #F3E28C
+background-image: url("https://upload.wikimedia.org/wikipedia/commons/2/28/The_surroundings_of_NGC_300_%28ESO_1004d%29.jpg");
 */
 
 tw-story{
- 	background-image: url("https://upload.wikimedia.org/wikipedia/commons/2/28/The_surroundings_of_NGC_300_%28ESO_1004d%29.jpg");
+	background-image: url("https://raw.githubusercontent.com/clairecahoon/intergalactic-errors/main/images/The_surroundings_of_NGC_300_(ESO_1004d).jpg");	
   font-family: "Lucida Console", sans-serif;
+  background-size: 100%;
+  font-size: 18px;
 }
 
 tw-passage {
@@ -33,17 +37,31 @@ tw-link {
 }
 
 tw-link:hover {
-	color: #DCB452
+	color: #DCB452;
 }
 
 tw-link:visited {
-	color:  #2C666E
+	color:  #2C666E;
 }
 
 img {
 	width: 40%;
   	margin-left: auto;
   	margin-right: auto;
+}
+
+.visited {
+	color: #46A9AA;
+}
+
+.visited:hover {
+	color: #DCB452;
+}
+
+#documentation {
+  	width: 80%;
+  	border: 3px solid black;
+  
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Game Introduction" tags="" position="50,300" size="200,100">#Intergalactic Error Messages
 
 Welcome to //Intergalactic Error Messages//, an interactive story game.
@@ -72,9 +90,13 @@ The error message says something about the touchpad, so you disconnect it and [[
 
 Luckily, your co-pilots work together to calm you down.
 
-Unluckily, panicking didn&#39;t make the error message go away and you lost valuable time.
+Unluckily, panicking didn&#39;t make the error message go away and you lost 20 spaceMinutes of valuable time.
 
-[[You return to the error message and try again. -&gt; Error #1]]</tw-passagedata><tw-passagedata pid="6" name="Error #2" tags="" position="1300,300" size="100,100">You&#39;re at the communication terminal, ready to send a message. 
+(set: $time_left to it - 20)
+You only have $time_left spaceMinutes left!
+
+(if: $time_left &lt;= 0)[[[Oh no, you&#39;re out of time! -&gt;Time&#39;s up]]]
+(else:)[[[You return to the error message and try again. -&gt; Error #1]]]</tw-passagedata><tw-passagedata pid="6" name="Error #2" tags="" position="1300,300" size="100,100">You&#39;re at the communication terminal, ready to send a message. 
 
 You craft the usual greeting message, which is 
 (align:&quot;&lt;==&quot;)+(box:&quot;=XXXXXXX==&quot;)[&quot;Greetings! We are a peaceful exploration mission. Can you confirm that you received this message?&quot;]
@@ -102,7 +124,11 @@ Something in the formatting step is messing up the message. It may not be proper
 
 You make a note that you&#39;ll have to look into this problem more later.
 
-For now, you move on to [[confirm the message and send.-&gt;Error #4]]</tw-passagedata><tw-passagedata pid="9" name="Print to console" tags="" position="1725,300" size="100,100">You add in an informational message after each step that tells you what&#39;s happening. This is what you see:
+(set: $time_left to it - 10)
+(if: $time_left &lt;= 0)[[[You have $time_left spaceMinutes left. Oh no, you&#39;re out of time! -&gt;Time&#39;s up]]]
+(else:)[For now, you move on to [[confirm the message and send.-&gt;Error #4]]
+
+You still have $time_left spaceMinutes left!]</tw-passagedata><tw-passagedata pid="9" name="Print to console" tags="" position="1725,300" size="100,100">You add in an informational message after each step that tells you what&#39;s happening. This is what you see:
 
 (align:&quot;&lt;==&quot;)+(box:&quot;===XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX===========================&quot;)+(text-colour:lime)[
 0. Check the text for spelling errors
@@ -123,13 +149,23 @@ You don&#39;t know how that line got there, but you don&#39;t need the message r
 
 (align:&quot;&lt;==&quot;)+(box:&quot;=XXXXXXX==&quot;)+(text-colour:lime)[&quot;Greetings! We are a peaceful exploration mission. Can you confirm that you received this message?&quot;]
 
-Now you can [[confirm the message and prepare it to send -&gt;Error #4]] </tw-passagedata><tw-passagedata pid="10" name="Band-aid fix" tags="" position="1725,150" size="100,100">You start writing an additional step for the terminal that will hopefully fix the text. 
+(set: $time_left to it - 10)
+(if: $time_left &lt;= 0)[[[You have $time_left spaceMinutes left. Oh no, you&#39;re out of time! -&gt;Time&#39;s up]]]
+(else:)[Now you can [[confirm the message and prepare it to send -&gt;Error #4]].
+
+You still have $time_left spaceMinutes left!]</tw-passagedata><tw-passagedata pid="10" name="Band-aid fix" tags="" position="1725,150" size="100,100">You start writing an additional step for the terminal that will hopefully fix the text. 
 
 It&#39;s difficult to tell what happened to the original message, so it takes a lot of trial and error to figure it out. 
 
 Instead of fixing the problem, you added more steps to reverse the effects, and it took so many lines of code that now the terminal runs slowly and inefficiently.
 
-[[Maybe there was a better way?-&gt;Error #2.2]] </tw-passagedata><tw-passagedata pid="11" name="Error #4" tags="" position="2025,300" size="100,100">Success! You sent a greeting to the Boggle ship. They respond to you quickly with this message:
+It took you so long and now the terminal is so slow that you spent 30 spaceMinutes on it.
+
+(set: $time_left to it - 30)
+You only have $time_left spaceMinutes left!
+
+(if: $time_left &lt;= 0)[[[Oh no, you&#39;re out of time! -&gt;Time&#39;s up]]]
+(else:)[[[Maybe there was a better way?-&gt;Error #2.2]] ]</tw-passagedata><tw-passagedata pid="11" name="Error #4" tags="" position="2025,300" size="100,100">Success! You sent a greeting to the Boggle ship. They respond to you quickly with this message:
 
 (bg:#262626)+(align:&quot;&lt;==&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX=========&quot;)[&quot;(This message is translated from Bogglese) Hello! We received a message from you but it does not make sense. Are you trying to communicate?&quot;]
 
@@ -139,17 +175,29 @@ What do you try to figure out what&#39;s wrong with your message?
 
 * [[Search in the Galactic Wide Web to see if anyone else has had similar problems with Bogglese translations. -&gt;Stack Overflow]]
 * [[Throw out the first message and start over. -&gt;Start over]]
-* [[Find documentation for Bogglese and compare your message to an example.-&gt;Documentation]]</tw-passagedata><tw-passagedata pid="12" name="Documentation" tags="" position="2175,300" size="100,100">You find the official documentation for Bogglese, which shows you how to construct sentences and use punctuation. You find an entry for &quot;greeting messages.&quot;
+* [[Find documentation for Bogglese and compare your message to an example.-&gt;Documentation]]</tw-passagedata><tw-passagedata pid="12" name="Documentation" tags="" position="2175,300" size="100,100">You find the official documentation for Bogglese, which shows you how to translate words and use punctuation. 
 
-You put your translated message next to the example message to find any differences.
+You find an entry with some relevant words and put them side-by-side with your message to check for differences.
 
-[TBD]
+&lt;img src=&quot;https://raw.githubusercontent.com/clairecahoon/intergalactic-errors/main/images/game_translation_image.PNG&quot; alt=&quot;A readout from the documentation, showing each word of the message translated into Bogglese. On the right is a comparison with the terminal&#39;s translation, showing that we have added an extra exclamation mark and didn&#39;t include an important comma.&quot; id=&quot;documentation&quot;&gt;
 
-You edit your message to match the documentation and [[try sending the message again.-&gt;Error #5]]</tw-passagedata><tw-passagedata pid="13" name="Start over" tags="" position="2175,150" size="100,100">You throw out the entire message and write another one from scratch.
+Ah-ha! (link-reveal:&quot;There&#39;s the mistake.&quot;)[=
+
+You left out an important comma in &quot;exploration&quot; and added an exclamation mark after &quot;Greetings,&quot; which doesn&#39;t work in Bogglese.
+
+(set: $time_left to it - 10)
+(if: $time_left &lt;= 0)[[[You have $time_left spaceMinutes left. Oh no, you&#39;re out of time! -&gt;Time&#39;s up]]]
+(else:)[You edit your message to match the documentation and [[try sending the message again.-&gt;Error #5]]
+
+You still have $time_left spaceMinutes left!]</tw-passagedata><tw-passagedata pid="13" name="Start over" tags="" position="2175,150" size="100,100">You throw out the entire message and write another one from scratch.
 
 It takes so long that their ship is now dangerously close to running into you! You send the new message and get the same response from them - it doesn&#39;t make sense.
 
-Maybe [[try something else.-&gt;Error #4]]</tw-passagedata><tw-passagedata pid="14" name="Error #5" tags="" position="2450,300" size="100,100">Success! 
+(set: $time_left to it - 20)
+Now you only have $time_left spaceMinutes left!
+
+(if: $time_left &lt;= 0)[[[Oh no, you&#39;re out of time! -&gt;Time&#39;s up]]]
+(else:)[Maybe [[try something else.-&gt;Error #4]]]</tw-passagedata><tw-passagedata pid="14" name="Error #5" tags="" position="2450,300" size="100,100">Success! 
 
 A boggle crew member appears on the communicator screen and you get a message back immediately that says, 
 (align:&quot;&lt;==&quot;)+(box:&quot;=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX=========&quot;)[&quot;Greetings! We understand you now and can confirm that we received your message. What do you need?&quot;]
@@ -169,18 +217,33 @@ The three of you look at the image transmitted from their ship. The Boggle on-sc
 
 You agree, you need to give very specific, literal directions to communicate effectively. 
 
+
+(set: $time_left to it - 10)
+(if: $time_left &lt;= 0)[[[You have $time_left spaceMinutes left. Oh no, you&#39;re out of time! -&gt;Time&#39;s up]]]
+(else:)[
 What should the new message be?
 * [[&quot;Turn your ship to the right&quot;]]
 * [[&quot;Please turn right&quot;]]
-* [[&quot;Turn your ship 45 degrees to the right&quot;]]</tw-passagedata><tw-passagedata pid="16" name="Documentation again" tags="" position="2750,450" size="100,100">You open the Bogglese documentation and double-check every word and punctuation. 
+* [[&quot;Turn your ship 45 degrees to the right&quot;]]
+
+You still have $time_left spaceMinutes left!]</tw-passagedata><tw-passagedata pid="16" name="Documentation again" tags="" position="2750,450" size="100,100">You open the Bogglese documentation and double-check every word and punctuation. 
 
 Everything looks correct! It must be about the meaning of the message, not the construction of the sentence.
 
-Now you&#39;re stuck again. Maybe [[Yasmeen and H&#39;lintT will have an idea?-&gt;Ask a friend]] </tw-passagedata><tw-passagedata pid="17" name="Panic!!" tags="" position="2750,150" size="100,100">You don&#39;t know what&#39;s going on! The ship is about to crash! Nothing is working!! (t8n-time:0.7s)+(link-reveal:&quot;You&#39;re all doomed!!!&quot;)[=
+(set: $time_left to it - 10)
+(if: $time_left &lt;= 0)[[[You have $time_left spaceMinutes left. Oh no, you&#39;re out of time! -&gt;Time&#39;s up]]]
+(else:)[Now you&#39;re stuck again. Maybe [[Yasmeen and H&#39;lintT will have an idea?-&gt;Ask a friend]]
+
+You still have $time_left spaceMinutes left!]</tw-passagedata><tw-passagedata pid="17" name="Panic!!" tags="" position="2750,150" size="100,100">You don&#39;t know what&#39;s going on! The ship is about to crash! Nothing is working!! (t8n-time:0.7s)+(link-reveal:&quot;You&#39;re all doomed!!!&quot;)[=
 
 Sometimes a break helps when you&#39;re panicking, but you don&#39;t have time for a break right now. 
 
-You&#39;ll just have to [[try something else-&gt;Error #5.2]].</tw-passagedata><tw-passagedata pid="18" name="&quot;Turn your ship to the right&quot;" tags="" position="2925,425" size="100,100">Success! Kind of...
+
+(set: $time_left to it - 10)
+You only have $time_left spaceMinutes left!
+
+(if: $time_left &lt;= 0)[[[Oh no, you&#39;re out of time! -&gt;Time&#39;s up]]]
+(else:)[You&#39;ll just have to [[try something else-&gt;Error #5.2]].]</tw-passagedata><tw-passagedata pid="18" name="&quot;Turn your ship to the right&quot;" tags="" position="2925,425" size="100,100">Success! Kind of...
 
 The Boggle ship turns to the right, but it&#39;s not far enough to be out of the way.
 
@@ -192,19 +255,22 @@ That&#39;s still not it!
 
 You [[try again with another message.-&gt;Ask a friend]] </tw-passagedata><tw-passagedata pid="20" name="&quot;Turn your ship 45 degrees to the right&quot;" tags="" position="2925,175" size="100,100">Success, the Boggle ship turns 45 degrees to the right! Now you won&#39;t run into each other.
 
-You and your co-pilots [[managed to save the ship.-&gt;The End]]</tw-passagedata><tw-passagedata pid="21" name="The End" tags="" position="3225,300" size="100,100">Phew! You were able to communicate with the boggle ship and ask them to move out of the way of your damaged ship.
+You and your co-pilots [[managed to save the ship.-&gt;The End]]</tw-passagedata><tw-passagedata pid="21" name="The End" tags="" position="3225,300" size="100,100">Phew! You were able to communicate with the boggle ship and ask them to move out of the way of your damaged ship with $time_left spaceMinutes left.
 
 Now that you have a working communications terminal and know more about the Bogglese syntax, you are able to send a quick message of thanks to your new friends.</tw-passagedata><tw-passagedata pid="22" name=" Story Introduction: part 1" tags="" position="325,150" size="200,100">The year is 3025, and you are a brave explorer on a small spacecraft in the outer limits of space. 
 
 You and your two co-pilots, Yasmeen and H&#39;lintT, are mapping out new parts of the galaxy to bring up-to-date maps back to Earth.
 
-Things were going well, but you recently ran into some [[trouble with an asteroid belt -&gt;Story Introduction: part 2]].
+Things were going well, but you recently ran into some [[trouble with an asteroid belt. -&gt;Story Introduction: part 2]]
 
 &lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/9/95/Image_taken_from_page_173_of_%27The_Half_Hour_Library_of_Travel%2C_Nature_and_Science_for_young_readers%27_%2811238783706%29.jpg&quot;&gt;</tw-passagedata><tw-passagedata pid="23" name=" Story Introduction: part 3" tags="" position="325,400" size="200,100">There&#39;s a huge ship coming right towards you! 
 
 &lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/9/95/Image_taken_from_page_173_of_%27The_Half_Hour_Library_of_Travel%2C_Nature_and_Science_for_young_readers%27_%2811238783706%29.jpg&quot;&gt;
 
 You can&#39;t steer out of the way, so if they don&#39;t turn, your ship will be destroyed.
+
+(set: $time_left to 100)
+You only have $time_left spaceMinutes before the crash!
 
 H&#39;lintT says, &quot;That looks like a Boggle ship, they&#39;re usually friendly to passing explorers. We just need to send them a message and ask them to change their course.&quot;
 
@@ -214,9 +280,19 @@ The terminal works, but now you don&#39;t have the touchpad to navigate with.
 
 You try reconnecting it, and it appears to be working again.
 
-You move on to [[use the communication terminal.-&gt;Error #2]]</tw-passagedata><tw-passagedata pid="25" name="Google it continued" tags="" position="1000,450" size="100,100">Success!
+(set: $time_left to it - 10)
 
-You fixed the terminal by restarting the touchpad, now you can [[access it to send a message -&gt;Error #2]]. </tw-passagedata><tw-passagedata pid="26" name="Error #2.2" tags="" position="1550,300" size="100,100">You open up the application to learn more. It looks like when you click &quot;Prepare to send,&quot; the terminal follows these steps to prepare the message:
+(if: $time_left &lt;= 0)[[[You have $time_left spaceMinutes left. Oh no, you&#39;re out of time! -&gt;Time&#39;s up]]]
+(else:)[You move on to [[use the communication terminal.-&gt;Error #2]]
+
+You still have $time_left spaceMinutes left!]</tw-passagedata><tw-passagedata pid="25" name="Google it continued" tags="" position="1000,450" size="100,100">Success!
+(set: $time_left to it - 10)
+
+
+(if: $time_left &lt;= 0)[[[You have $time_left spaceMinutes left. Oh no, you&#39;re out of time! -&gt;Time&#39;s up]]]
+(else:)[You fixed the terminal by restarting the touchpad, now you can [[access it to send a message -&gt;Error #2]].
+
+You still have $time_left spaceMinutes left!]</tw-passagedata><tw-passagedata pid="26" name="Error #2.2" tags="" position="1550,300" size="100,100">You open up the application to learn more. It looks like when you click &quot;Prepare to send,&quot; the terminal follows these steps to prepare the message:
 
 (align:&quot;&lt;==&quot;)+(box:&quot;===XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX===========================&quot;)+(text-colour:lime)[0. Check the message for spelling errors
 0. Check the message for length
@@ -234,7 +310,11 @@ There are lots of search results, but the first is an open forum for spaceship e
 
 Sounds like this is a common problem, which is good news. 
 
-You probably don&#39;t have time to modify your communication terminal, so you decide to [[try using the Bogglese documentation-&gt;Documentation]].</tw-passagedata><tw-passagedata pid="28" name="Error #2.1" tags="" position="1425,300" size="100,100">You see the following:
+(set: $time_left to it - 10)
+(if: $time_left &lt;= 0)[[[You have $time_left spaceMinutes left. Oh no, you&#39;re out of time! -&gt;Time&#39;s up]]]
+(else:)[You probably don&#39;t have time to modify your communication terminal, so you decide to [[try using the Bogglese documentation-&gt;Documentation]].
+
+You still have $time_left spaceMinutes left!]</tw-passagedata><tw-passagedata pid="28" name="Error #2.1" tags="" position="1425,300" size="100,100">You see the following:
 
 (align:&quot;&lt;==&quot;)+(box:&quot;=XXXXXXX==&quot;)+(text-colour:lime)
 [Message prepared, please confirm:
@@ -253,7 +333,7 @@ What went wrong? What will you do?
 
 * [[Panic!!]]
 * [[Ask your co-pilots for advice-&gt;Ask a friend]]
-* [[Return to the Booglese documentation to check for translation errors-&gt;Documentation again]]</tw-passagedata></tw-storydata>
+* [[Return to the Booglese documentation to check for translation errors-&gt;Documentation again]]</tw-passagedata><tw-passagedata pid="30" name="Time&#39;s up" tags="" position="3250,50" size="100,100">You lost!</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
