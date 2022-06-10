@@ -13,10 +13,10 @@
 Dark Teal: #07393C
 Teal: #2C666E
 Light Teal: #46A9AA
-Gold: #DCB452
+Dark yellow: #DCB452
 Yellow: #F7DD5C
 Light yellow: #F3E28C
-background-image: url("https://upload.wikimedia.org/wikipedia/commons/2/28/The_surroundings_of_NGC_300_%28ESO_1004d%29.jpg");
+Light red: #ff7575
 */
 
 tw-story{
@@ -28,25 +28,8 @@ tw-story{
 
 tw-passage {
  	background-color: black;
- 	padding: 7%;
+ 	padding: 7% 7% 7% 7%;
 	border: 5px solid #2C666E;
-}
-
-tw-sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin-left: auto
-	margin-right: auto;
-  width: 20%; /* padding-right of the tw-story element. */
-  max-height: 100%;
-  margin-top: 5%;
-  background-color: transparent;
-}
-
-tw-icon {
-  text-align: right;
-  padding-right: 0.75em;
 }
 
 tw-link {
@@ -78,13 +61,14 @@ img {
 #documentation {
   	width: 80%;
   	border: 3px solid black;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Game Introduction" tags="" position="50,350" size="200,100">#Intergalactic Error Messages
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Game Introduction" tags="no-footer" position="50,350" size="200,100">
+#Intergalactic Error Messages
 
 Welcome to //Intergalactic Error Messages//, an interactive story game.
 
 You will be able to move through the story and make choices by clicking on the yellow links on each page.
 
-[[Get Started -&gt; Story Introduction: part 1]]</tw-passagedata><tw-passagedata pid="2" name="Story Introduction: part 2" tags="" position="325,325" size="200,100">Your ship is in bad shape, so you&#39;ve planned a course to the nearest spaceport for repairs. 
+[[Get Started -&gt; Story Introduction: part 1]]</tw-passagedata><tw-passagedata pid="2" name="Story Introduction: part 2" tags="no-footer" position="325,325" size="200,100">Your ship is in bad shape, so you&#39;ve planned a course to the nearest spaceport for repairs. 
 
 You repaired what you could, but the asteroids left you with no steering.
 
@@ -100,7 +84,7 @@ You need to fix this right away. Do you...
 * [[It says something about the touchpad, remove it. -&gt;Comment out]]
 * [[Panic!-&gt;Panic]]</tw-passagedata><tw-passagedata pid="4" name="Comment out" tags="" position="850,350" size="100,100">You decide to remove the part that isn&#39;t working and see if the rest of the terminal is ok.
 
-The error message says something about the touchpad, so you disconnect it and [[try the terminal again. -&gt;Comment out continued]]</tw-passagedata><tw-passagedata pid="5" name="Panic" tags="" position="850,200" size="100,100">You panic, of course! Everything is broken and (t8n:&quot;dissolve&quot;)+(t8n-time:0.7s)+(link-reveal:&quot;the ship is doomed!&quot;)[=
+The error message says something about the touchpad, so you disconnect it and [[try the terminal again. -&gt;Comment out continued]]</tw-passagedata><tw-passagedata pid="5" name="Panic" tags="no-footer" position="850,200" size="100,100">You panic, of course! Everything is broken and (t8n:&quot;dissolve&quot;)+(t8n-time:0.7s)+(link-reveal:&quot;the ship is doomed!&quot;)[=
 
 ---
 
@@ -269,7 +253,12 @@ You [[try again with another message.-&gt;Ask a friend]] </tw-passagedata><tw-pa
 
 You and your co-pilots [[managed to save the ship.-&gt;The End]]</tw-passagedata><tw-passagedata pid="21" name="The End" tags="" position="3225,350" size="100,100">Phew! You were able to communicate with the boggle ship and ask them to move out of the way of your damaged ship with (text-colour:#ff7575)[$time_left] spaceMinutes left.
 
-Now that you have a working communications terminal and know more about the Bogglese syntax, you are able to send a quick message of thanks to your new friends.</tw-passagedata><tw-passagedata pid="22" name=" Story Introduction: part 1" tags="" position="325,200" size="200,100">The year is 3025, and you are a brave explorer on a small spacecraft in the outer limits of space. 
+Now that you have a working communications terminal and know more about the Bogglese syntax, you are able to send a quick message of thanks to your new friends.
+
+---
+
+Thanks for playing //Intergalactic Space Errors//! 
+[[Start over at the beginning-&gt;Game Introduction]]</tw-passagedata><tw-passagedata pid="22" name=" Story Introduction: part 1" tags="no-footer" position="325,200" size="200,100">The year is 3025, and you are a brave explorer on a small spacecraft in the outer limits of space. 
 
 You and your two co-pilots, Yasmeen and H&#39;lintT, are mapping out new parts of the galaxy to bring up-to-date maps back to Earth.
 
@@ -286,7 +275,7 @@ You only have (text-colour:#ff7575)[$time_left] spaceMinutes before the crash!
 
 H&#39;lintT says, &quot;That looks like a Boggle ship, they&#39;re usually friendly to passing explorers. We just need to send them a message and ask them to change their course.&quot;
 
-You [[rush over to the communication terminal -&gt; Error #1]] to send it.</tw-passagedata><tw-passagedata pid="24" name="Comment out continued" tags="" position="1000,350" size="100,100">Success!
+You [[rush over to the communication terminal -&gt; Error #1]] to send it.</tw-passagedata><tw-passagedata pid="24" name="Comment out continued" tags="no-footer" position="1000,350" size="100,100">Success!
 
 The terminal works, but now you don&#39;t have the touchpad to navigate with. 
 
@@ -295,7 +284,7 @@ You try reconnecting it, and it appears to be working again.
 (if: $time_left &lt;= 0)[You have (text-colour:#ff7575)[$time_left] spaceMinutes left.[[ Oh no, you&#39;re out of time! -&gt;Time&#39;s up]]]
 (else:)[You move on to [[use the communication terminal.-&gt;Error #2]]
 
-You still have (text-colour:#ff7575)[$time_left] spaceMinutes left!]</tw-passagedata><tw-passagedata pid="25" name="Google it continued" tags="" position="1000,500" size="100,100">Success!
+You still have (text-colour:#ff7575)[$time_left] spaceMinutes left!]</tw-passagedata><tw-passagedata pid="25" name="Google it continued" tags="no-footer" position="1000,500" size="100,100">Success!
 (set: $time_left to it - 10)
 (if: $time_left &lt;= 0)[You have (text-colour:#ff7575)[$time_left] spaceMinutes left. [[Oh no, you&#39;re out of time! -&gt;Time&#39;s up]]]
 (else:)[You fixed the terminal by restarting the touchpad, now you can [[access it to send a message. -&gt;Error #2]]
@@ -349,11 +338,7 @@ You ran out of time! Unfortunately, your ship was destroyed. You, Yasmeen, and H
 In the real world, troubleshooting takes time and patience, do you want to try again?
 
 [[Start over at the beginning!-&gt; Story Introduction: part 3]]
-</tw-passagedata><tw-passagedata pid="31" name="Time counter" tags="footer" position="100,575" size="100,100">(append: ?SideBar)[\
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X=&quot;)[spaceMinutes
-left:
-(text-colour:#ff7575)[$time_left]]
-]</tw-passagedata></tw-storydata>
+</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
